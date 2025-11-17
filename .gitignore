@@ -1,3 +1,4 @@
 /wallet/
 /backend/.dockerignore
 /backend/__pycache__/
+GEMINI.md
