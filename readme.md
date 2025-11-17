@@ -68,13 +68,13 @@ cd PapoDados
 cd backend
 python -m venv venv
 source venv/bin/activate  # Linux/Mac
-# .\venv\Scripts\activate # Windows
+.\venv\Scripts\activate # Windows
 
 pip install -r requirements.txt
 
 # Configure as variáveis de ambiente (.env)
-# OCI_CONFIG_PROFILE=DEFAULT
-# DATABASE_URL=...
+OCI_CONFIG_PROFILE=DEFAULT
+DATABASE_URL=...
 
 python manage.py migrate
 python manage.py runserver
@@ -87,18 +87,17 @@ npm run dev
 
 ## 🛣️ Roadmap
 
-# [ ] Fase 1 (MVP): Upload de CSV + Chat SQL Simples + Deploy OCI.
+[ ] Fase 1 (MVP): Upload de CSV + Chat SQL Simples + Deploy OCI.
 
-# [ ] Fase 2 (Intelligence): Integração com OCI Vector Search para busca semântica em colunas de texto.
+[ ] Fase 2 (Intelligence): Integração com OCI Vector Search para busca semântica em colunas de texto.
 
-# [ ] Fase 3 (Scale): Suporte a arquivos múltiplos e cruzamento de dados (Join Inteligente).
+[ ] Fase 3 (Scale): Suporte a arquivos múltiplos e cruzamento de dados (Join Inteligente).
 
-# [ ] Fase 4 (SaaS): Integração com Stripe e planos de assinatura.#
+[ ] Fase 4 (SaaS): Integração com Stripe e planos de assinatura.#
 
 👨‍💻 Autor
 
-<img src="https://www.google.com/search?q=https://github.com/CidQueiroz.png" width="100px;" alt="Foto de Cidirclay"/>
-
+<img src="https://github.com/CidQueiroz.png" width="100px;" alt="Foto de Cidirclay"/>
 Cidirclay Queiroz Solutions Architect AI | MLOps Engineer | OCI Specialist
 
 Especialista em transformar problemas de negócio complexos em soluções escaláveis na nuvem. Focado em Arquitetura Multi-Cloud e Engenharia de IA Generativa.
