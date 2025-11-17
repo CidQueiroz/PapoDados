@@ -1,0 +1,3 @@
+/wallet/
+/backend/.dockerignore
+/backend/__pycache__/
