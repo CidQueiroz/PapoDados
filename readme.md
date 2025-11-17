@@ -60,17 +60,11 @@ Este projeto demonstra uma arquitetura **Cloud-Native** e **Scalable**, utilizan
 * Conta na Oracle Cloud (para API Keys)
 
 ### 1. Clone o repositório
-```bash
-git clone [https://github.com/CidQueiroz/PapoDados.git](https://github.com/CidQueiroz/PapoDados.git)
-cd PapoDados
 
-### 1. Clone o repositório
-```bash
 git clone [https://github.com/CidQueiroz/PapoDados.git](https://github.com/CidQueiroz/PapoDados.git)
 cd PapoDados
 
 2. Configuração do Backend
-Bash
 
 cd backend
 python -m venv venv
@@ -87,7 +81,6 @@ python manage.py migrate
 python manage.py runserver
 
 3. Configuração do Frontend
-Bash
 
 cd frontend
 npm install
