@@ -44,11 +44,17 @@ Este projeto demonstra uma arquitetura **Cloud-Native** e **Scalable**, utilizan
 
 ## ✨ Funcionalidades Chave
 
-- [x] **Upload Inteligente:** Ingestão automática de CSV/XLSX com detecção de tipagem via Pandas.
-- [x] **Chat com Dados (RAG):** O usuário pergunta *"Qual foi o produto mais vendido em SP?"* e recebe a resposta exata + gráfico.
-- [x] **Insights Proativos:** O sistema analisa os dados em background e sugere perguntas ("Cards de Inteligência") antes mesmo do usuário digitar.
-- [x] **Segurança Multi-Tenant:** Isolamento lógico de dados por cliente dentro do Oracle Autonomous Database.
-- [x] **Visualização Dinâmica:** O Frontend decide automaticamente se exibe a resposta como Texto, Tabela ou Gráfico (Barras/Linhas/Pizza).
+- 📤 **Upload Inteligente:** Ingestão automática de CSV/XLSX com detecção de tipagem via Pandas.
+- 💬 **Chat com Dados (RAG):** O usuário pergunta *"Qual foi o produto mais vendido em SP?"* e recebe a resposta exata + gráfico.
+- 💡 **Insights Proativos:** O sistema analisa os dados em background e sugere perguntas ("Cards de Inteligência") antes mesmo do usuário digitar.
+- 🔒 **Segurança Multi-Tenant:** Isolamento lógico de dados por cliente dentro do Oracle Autonomous Database.
+- 📊 **Visualização Dinâmica:** O Frontend decide automaticamente se exibe a resposta como Texto, Tabela ou Gráfico (Barras/Linhas/Pizza).
+- 🧠 **RAG Inteligente:** Sistema de busca semântica com embeddings.
+- 🚀 **Groq AI:** Respostas ultra-rápidas com Llama 3.
+- 🌐 **Google AI:** Fallback automático com Gemini 1.5.
+- 🔐 **Segurança:** Autenticação Firebase + dados protegidos.
+- 🐳 **Containerizado:** Ambiente de desenvolvimento e produção 100% em Docker.
+- 🤖 **Versionamento Automático:** Releases e changelogs automáticos com semantic-release.
 
 ---
 
@@ -88,13 +94,10 @@ npm run dev
 
 ## 🛣️ Roadmap
 
-[ ] Fase 1 (MVP): Upload de CSV + Chat SQL Simples + Deploy OCI.
-
-[ ] Fase 2 (Intelligence): Integração com OCI Vector Search para busca semântica em colunas de texto.
-
-[ ] Fase 3 (Scale): Suporte a arquivos múltiplos e cruzamento de dados (Join Inteligente).
-
-[ ] Fase 4 (SaaS): Integração com Stripe e planos de assinatura.#
+- [ ] Fase 1 (MVP): Upload de CSV + Chat SQL Simples + Deploy OCI.
+- [ ] Fase 2 (Intelligence): Integração com OCI Vector Search para busca semântica em colunas de texto.
+- [ ] Fase 3 (Scale): Suporte a arquivos múltiplos e cruzamento de dados (Join Inteligente).
+- [ ] Fase 4 (SaaS): Integração com Stripe e planos de assinatura.#
 
 👨‍💻 Autor
 
