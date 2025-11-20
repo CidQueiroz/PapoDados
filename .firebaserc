@@ -1,0 +1,22 @@
+{
+  "projects": {
+    "default": "cdkteck-hub"
+  },
+  "targets": {
+    "senseidb-rebranding": {
+      "hosting": {
+        "papodados-app": [
+          "papodados-app"
+        ]
+      }
+    },
+    "cdkteck-hub": {
+      "hosting": {
+        "papodados-app": [
+          "papodados-app"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

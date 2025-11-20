@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "target": "papodados-app",
+    "public": "frontend/dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
