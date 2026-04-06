@@ -1,12 +1,12 @@
-// PapoDados/frontend/src/App.jsx
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route, Navigate, useLocation, Link } from 'react-router-dom';
-import { Header, Footer } from '@cidqueiroz/cdkteck-ui';
+import { Header, Footer, useTheme, CDKFavicon } from '@cidqueiroz/cdkteck-ui';
 import { useAuth } from './context/AuthContext';
 import LoginPage from './pages/LoginPage';
 import MainPage from './pages/MainPage';
 import Privacidade from './pages/Privacidade';
 import Termos from './pages/Termos';
+import '@cidqueiroz/cdkteck-ui/global.css';
 
 const PrivateRoute = ({ children }) => {
   const { user, isLoading } = useAuth();
@@ -21,8 +21,21 @@ const PrivateRoute = ({ children }) => {
 function App() {
   const { user, isLoading } = useAuth();
   const location = useLocation();
+  const { theme, toggleTheme } = useTheme();
 
+  useEffect(() => {
+    // Sincroniza o tema inicial com localStorage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme && savedTheme !== theme) {
+      toggleTheme();
+    }
+  }, []);
 
+  const handleThemeToggle = () => {
+    const nextTheme = theme === 'light' ? 'dark' : 'light';
+    localStorage.setItem('theme', nextTheme);
+    toggleTheme();
+  };
 
   const ReactRouterLink = (props) => (
     <Link {...props} />
@@ -30,9 +43,11 @@ function App() {
 
   return (
     <div className="app-container bg-vitrine">
+      <CDKFavicon />
       <Header 
         LinkComponent={ReactRouterLink}
         usePathname={() => location.pathname}
+        onThemeToggle={handleThemeToggle}
       />
       <main className="flex-grow">
         <Routes>
