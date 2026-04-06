@@ -1,17 +1,16 @@
-// PapoDados/frontend/src/pages/LoginPage.jsx
 import React from 'react';
 import { useAuth } from '../context/AuthContext';
 import { LoginPage as CdkLoginPage } from '@cidqueiroz/cdkteck-ui';
 import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
-  const { login, register, loginWithGoogle, loginWithFace, loginWithLinked, isLoading, error } = useAuth();
+  const { login, register, loginWithGoogle, loginWithLinked, loginWithFace, isLoading, error } = useAuth();
   const navigate = useNavigate();
 
   const handleLogin = async ({ email, password }) => {
     try {
       await login(email, password);
-      navigate('/'); // Redirect to home after successful login
+      navigate('/');
     } catch (err) {
       // Error is handled in AuthContext
     }
@@ -34,21 +33,20 @@ const LoginPage = () => {
       // Error is handled in AuthContext
     }
   };
-
-    const handleFaceLogin = async () => {
+  
+  const handleFaceLogin = async () => {
     try {
       await loginWithFace();
-      navigate('/'); // Redirect after successful Facebook login
+      navigate('/'); // Redirect after successful Google login
     } catch (err) {
       // Error is handled in AuthContext
     }
   };
 
-    const handleLinkedLogin = async () => {
+  const handleLinkedLogin = async () => {
     try {
       await loginWithLinked();
-      navigate('/')
-      ; // Redirect after successful Linkedin login
+      navigate('/'); // Redirect after successful LinkedIn login
     } catch (err) {
       // Error is handled in AuthContext
     }
@@ -60,7 +58,7 @@ const LoginPage = () => {
       onRegister={handleRegister}
       onGoogleLogin={handleGoogleLogin}
       onFacebookLogin={handleFaceLogin}
-      onLinkedinLogin={handleLinkedLogin}
+      onLinkedInLogin={handleLinkedLogin}
       isLoading={isLoading}
       error={error}
       appName="PapoDados"
