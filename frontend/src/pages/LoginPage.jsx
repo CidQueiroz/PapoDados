@@ -1,10 +1,11 @@
+// GestaoRPD/frontend/src/pages/LoginPage.jsx
 import React from 'react';
 import { useAuth } from '../context/AuthContext';
 import { LoginPage as CdkLoginPage } from '@cidqueiroz/cdkteck-ui';
 import { useNavigate } from 'react-router-dom';
 
 const LoginPage = () => {
-  const { login, register, loginWithGoogle, loginWithLinked, loginWithFace, isLoading, error } = useAuth();
+  const { login, register, loginWithGoogle, loginWithGitHub, loginWithFace, isLoading, error } = useAuth();
   const navigate = useNavigate();
 
   const handleLogin = async ({ email, password }) => {
@@ -43,12 +44,11 @@ const LoginPage = () => {
     }
   };
 
-  const handleLinkedLogin = async () => {
+  const handleGitHubLogin = async () => {
     try {
-      await loginWithLinked();
-      navigate('/'); // Redirect after successful LinkedIn login
+      await loginWithGitHub();
+      navigate('/');
     } catch (err) {
-      // Error is handled in AuthContext
     }
   };
 
@@ -58,10 +58,10 @@ const LoginPage = () => {
       onRegister={handleRegister}
       onGoogleLogin={handleGoogleLogin}
       onFacebookLogin={handleFaceLogin}
-      onLinkedInLogin={handleLinkedLogin}
+      onGitHubLogin={handleGitHubLogin}
       isLoading={isLoading}
       error={error}
-      appName="PapoDados"
+      appName="Gestão RPD"
     />
   );
 };
